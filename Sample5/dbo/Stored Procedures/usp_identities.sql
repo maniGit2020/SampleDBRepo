@@ -1,0 +1,8 @@
+﻿Create procedure usp_identities 
+AS
+BEGIN
+
+insert into tblidentity values ('C')
+SELECT @@IDENTITY AS '@@IDENTITY_INPROC'
+SELECT SCOPE_IDENTITY() AS 'SCOPEIDENTITY_INPROC'
+SELECT IDENT_CURRENT('tblidentity') AS 'IDENTCURRENT_INPROC'END
